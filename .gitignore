@@ -1,0 +1,35 @@
+# Archivos de entorno
+.env
+*.env
+
+# Archivos sensibles
+*.key
+*.pem
+*.crt
+
+# Logs
+logs/
+*.log
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Virtual environments
+.venv/
+venv/
+
+# IDEs y editores
+.vscode/
+.idea/
+
+# Docker
+*.tar
