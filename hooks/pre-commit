@@ -1,0 +1,18 @@
+#!/bin/bash
+
+LOG_FILE=".git/hooks/commit.log"
+TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+
+echo "🛡️ Ejecutando pre-commit simbiótico: detección de secretos..."
+
+# Buscar posibles claves en .env o .env.template
+if grep -Eq "sk-[a-zA-Z0-9]{32,}" .env .env.template 2>/dev/null; then
+  echo "❌ Se detectó un posible OpenAI API Key en un archivo .env"
+  echo "🛑 Commit bloqueado por seguridad."
+  echo "$TIMESTAMP ❌ Commit bloqueado - secreto detectado" >> $LOG_FILE
+  exit 1
+fi
+
+echo "✅ Pre-commit validado simbólicamente. Todo en orden."
+echo "$TIMESTAMP ✅ Commit autorizado" >> $LOG_FILE
+exit 0
