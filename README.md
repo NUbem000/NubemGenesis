@@ -5,6 +5,9 @@
 
 ---
 
+
+📚 [Ver índice completo de documentación simbiótica](./docs_menu.md)
+
 ## 🚀 ¿Qué hace este entorno?
 
 - Despliega funciones (Google Cloud Functions)
