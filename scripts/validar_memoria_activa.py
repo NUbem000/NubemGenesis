@@ -1,27 +1,28 @@
+# 🔧 FUNCION: validar_memoria_activa
+# 🧠 DESCRIPCION: Valida conexión y escritura en Firestore
+# 📎 DEPENDE DE: google-cloud-firestore, credenciales.json
+
+import os
 from google.cloud import firestore
-from datetime import datetime
+from datetime import datetime, timezone
 
-# Configuración simbólica
-COLECCION = "memoria"
-DOCUMENTO = "nubem-test"
+# Establecer credenciales explícitamente
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/root/secrets/credenciales.json"
 
-# Conexión al cliente Firestore
 client = firestore.Client(project="nubemgenesis-deploy")
 
-# Escritura simbólica de prueba
-doc_ref = client.collection(COLECCION).document(DOCUMENTO)
+# Escritura simbólica
+doc_ref = client.collection("memoria").document("nubem-test")
 doc_ref.set({
     "estado": "activo",
     "autor": "David Anguera",
     "sello": "NubemGenesis",
-    "timestamp": datetime.utcnow().isoformat()
+    "timestamp": datetime.now(timezone.utc).isoformat()
 })
 
-print("✅ Documento de prueba escrito correctamente.\n")
+# Lectura
+docs = client.collection("memoria").stream()
 
-# Lectura de todos los documentos en la colección
-docs = client.collection(COLECCION).stream()
-
-print(f"🧠 Documentos encontrados en la colección '{COLECCION}':")
+print("🧠 Documentos encontrados en la colección 'memoria':")
 for doc in docs:
     print(f"• {doc.id} => {doc.to_dict()}")
