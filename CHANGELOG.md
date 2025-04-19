@@ -36,4 +36,10 @@
 - Consolidación de todos los componentes en `NubemGenesisDeploy_v1.0.zip`
 - Estructura preparada para evolución: scripts, workflows, hooks, documentación
 
+---## [v1.2.0-dev] - [en desarrollo]
+
+### Añadido
+- 📁 Versión simbiótica inicial v1.2.0-dev
+- 🧭 Activación del roadmap para dashboards y plugins GPT
+
 ---

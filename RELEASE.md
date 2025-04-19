@@ -1,31 +1,26 @@
-# 🚀 NubemGenesisDeploy – Release v1.0.0
+# 🚀 NubemGenesisDeploy – Release v1.2.0-dev
 
-**Fecha de publicación:** 2025-04-19
-
-**Versión simbiótica generada automáticamente desde los metadatos del proyecto.**
+**Fecha estimada:** [por definir]  
+**Estado:** En desarrollo
 
 ---
 
-## 📦 Componentes destacados
+## 🎯 Objetivos clave de esta versión
 
-## [v1.0.0] - 2025-04-18
+- Implementar dashboards visuales simbióticos (estado.sh + live view)
+- Integrar conexión directa con GPT Plugin (gpt_plugin_autoconnect.sh)
+- Automatizar publicación de documentación desde CI/CD
+- Expandir documentación en vivo con metadatos y relaciones
+- Centralizar configuración simbiótica vía `config.yaml`
 
-### 🔰 Primera release oficial del entorno simbiótico
+---
 
-#### 🧱 Infraestructura
-- Configuración de VM Ubuntu Clouding (2vCPU, 8GB RAM)
-- Instalación de herramientas base: gcloud, firebase, node, pip, docker, git
+## 🛠 Archivos planificados
 
-#### 🔐 Autenticaciones y servicios
-- Activación de cuenta personal y cuenta de servicio (GCP)
-- Configuración de Firestore como memoria activa (modo nativo)
-- Validación de conectividad y permisos desde entorno virtual Python
+- `dashboard.html` o `dashboard.py` – Visor de estado
+- `plugin_autoconnect.sh` – Vinculación GPT automática
+- `config.yaml` – Centro de control evolutivo
+- `makefile` – Accesos rápidos (`make deploy`, `make docs`, etc.)
+- `meta/` – Carpeta para etiquetas, símbolos y trazabilidad extendida
 
-#### 🧠 Scripts creados
-- `check_env.sh`: Verificación de entorno simbiótico
-- `validar_memoria_activa.py`: Test de lectura/escritura en Firestore
-- `deploy_nubemgenesis.sh`: Despliegue manual con validación previa
-- `git_clean_and_force_push.sh`: Limpieza automática de secretos en `.env.template`
-- `run_nubemgenesis.sh`: Orquestador simbiótico que ejecuta todo desde una línea
-
-
+---
