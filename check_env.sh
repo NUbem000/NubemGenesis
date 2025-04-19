@@ -68,5 +68,14 @@ else
   echo "❌ No hay sesión activa en GCloud"
 fi
 
+# 6. Validación simbólica de Firestore (memoria activa)
+echo -e "\n🧠 Validando memoria activa con test_memoria.sh..."
+if [ -f test_memoria.sh ]; then
+  chmod +x test_memoria.sh
+  ./test_memoria.sh || echo "⚠️ Fallo en validación de memoria simbólica"
+else
+  echo "⚠️ test_memoria.sh no encontrado"
+fi
+
 echo "──────────────────────────────────────────────────────"
 echo "✔️ Checklist simbiótico finalizado."
