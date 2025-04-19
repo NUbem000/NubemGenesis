@@ -1,0 +1,39 @@
+name: NubemGenesis Deploy Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  simbionico:
+    name: Validar y Desplegar (Simbióticamente)
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout del repositorio
+      uses: actions/checkout@v3
+
+    - name: ⚙️ Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: 🧪 Validar estructura simbiótica
+      run: |
+        echo "📁 Verificando estructura de carpetas..."
+        test -d scripts || (echo "❌ Falta carpeta scripts" && exit 1)
+        test -f check_env.sh || (echo "❌ Falta check_env.sh" && exit 1)
+        test -f scripts/validar_memoria_activa.py || (echo "❌ Falta validación Firestore" && exit 1)
+
+    - name: 📦 Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install google-cloud-firestore
+
+    - name: 🧠 Ejecutar validación de memoria activa
+      run: |
+        python scripts/validar_memoria_activa.py
+
+    - name: ✅ Validación simbiótica completada
+      run: echo "🧬 Despliegue simbiótico validado con éxito."
