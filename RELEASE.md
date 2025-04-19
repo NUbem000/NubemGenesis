@@ -1,38 +1,31 @@
 # 🚀 NubemGenesisDeploy – Release v1.0.0
 
-**Fecha de publicación:** 2025-04-18  
-**Versión simbólica inicial totalmente funcional**
+**Fecha de publicación:** 2025-04-19
+
+**Versión simbiótica generada automáticamente desde los metadatos del proyecto.**
 
 ---
 
-## 🔍 Descripción
+## 📦 Componentes destacados
 
-Esta versión marca el inicio operativo del sistema NubemGenesisDeploy, habilitando despliegue automatizado, validación de memoria activa, protección de secretos y CI/CD simbiótico completo.
+## [v1.0.0] - 2025-04-18
 
----
+### 🔰 Primera release oficial del entorno simbiótico
 
-## 🧩 Componentes incluidos
+#### 🧱 Infraestructura
+- Configuración de VM Ubuntu Clouding (2vCPU, 8GB RAM)
+- Instalación de herramientas base: gcloud, firebase, node, pip, docker, git
 
-- `run_nubemgenesis.sh` – Orquestador maestro
-- `check_env.sh` – Verificador de entorno
-- `validar_memoria_activa.py` – Test de Firestore
-- `deploy_nubemgenesis.sh` – Despliegue manual
-- `git_clean_and_force_push.sh` – Corrección de commits con secretos
-- `hooks/pre-commit` – Protección automática local
-- GitHub Actions:
-  - `deploy.yml`
-  - `deploy_full.yml`
-- Documentación:
-  - `README.md`
-  - `README_actions.md`
-  - `CHANGELOG.md`
-  - `VERSION`
+#### 🔐 Autenticaciones y servicios
+- Activación de cuenta personal y cuenta de servicio (GCP)
+- Configuración de Firestore como memoria activa (modo nativo)
+- Validación de conectividad y permisos desde entorno virtual Python
 
----
+#### 🧠 Scripts creados
+- `check_env.sh`: Verificación de entorno simbiótico
+- `validar_memoria_activa.py`: Test de lectura/escritura en Firestore
+- `deploy_nubemgenesis.sh`: Despliegue manual con validación previa
+- `git_clean_and_force_push.sh`: Limpieza automática de secretos en `.env.template`
+- `run_nubemgenesis.sh`: Orquestador simbiótico que ejecuta todo desde una línea
 
-## 📦 Paquete de entrega
 
-✅ Archivo ZIP: `NubemGenesisDeploy_v1.0.zip`  
-📁 Contiene todos los scripts, hooks, workflows y documentación para activación simbiótica inmediata.
-
----
