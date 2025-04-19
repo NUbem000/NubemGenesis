@@ -1,0 +1,9 @@
+estructura:
+  agentes:
+    - nombre: agent_gpt_core
+      tipo: IA
+  carpetas:
+    - agents/
+    - meta/
+    - live/
+    - autoconfig/
