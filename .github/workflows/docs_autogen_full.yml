@@ -1,0 +1,39 @@
+name: 📘 Generar Documentación y Diagrama Simbiótico
+
+on:
+  push:
+    branches:
+      - main
+      - v1.1.0-dev
+
+jobs:
+  generar-docs:
+    runs-on: ubuntu-latest
+    name: Auto-generar documentación y diagrama simbiótico
+
+    steps:
+    - name: 📥 Checkout del repositorio
+      uses: actions/checkout@v3
+
+    - name: ⚙️ Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: 📦 Instalar dependencias
+      run: pip install pathlib
+
+    - name: 🧠 Generar documentación y diagrama HTML
+      run: |
+        python docs_autogen.py
+        python docs_relaciones_autohtml.py
+
+    - name: 🚀 Subir documentación y diagrama generados
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "📘 Documentación y diagrama simbiótico regenerados automáticamente"
+        branch: ${{ github.ref_name }}
+        file_pattern: |
+          DOCUMENTACION_COMPLETA_GENERADA.md
+          diagrama.md
+          diagrama_interactivo.html
