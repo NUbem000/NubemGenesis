@@ -42,4 +42,6 @@ git commit -m '🚀 Despliegue simbiótico automatizado completo'
 git push
 
 python3 release_preparar.py || echo '⚠️ No se pudo generar RELEASE.md'
+echo '\n🧠 Ejecutando resumen final (dashboard.py)...'
+python3 dashboard.py || echo '⚠️ No se pudo ejecutar dashboard simbiótico'
 echo "🎉 NubemGenesis desplegado y validado simbióticamente con éxito."
