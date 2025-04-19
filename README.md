@@ -1,4 +1,5 @@
 # 🧠 NubemGenesisDeploy – Entorno Simbiótico de Despliegue
+[![📘 Documentación Simbiótica](https://github.com/NUbem000/NubemGenesis/actions/workflows/docs_autogen.yml/badge.svg)](https://github.com/NUbem000/NubemGenesis/actions/workflows/docs_autogen.yml)
 
 **NubemGenesisDeploy** es una arquitectura diseñada para desplegar, validar y versionar simbólicamente todos los componentes críticos de un sistema inteligente. Opera como núcleo técnico de NubemGenesis y conecta funciones, frontend y memoria activa en Firestore con automatización total y control simbólico.
 
