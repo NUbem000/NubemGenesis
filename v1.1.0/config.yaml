@@ -1,0 +1,11 @@
+proyecto: nubemgenesis-deploy
+entorno: produccion
+firestore:
+  region: europe-west1
+  memoria: memoria
+frontend:
+  framework: html
+  deploy: firebase
+gpt:
+  modelo: gpt-4
+  plugin_url: https://api.nubemflow.com/openapi.yaml
